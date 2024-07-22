@@ -1,0 +1,42 @@
+@import url('https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css');
+
+body {
+    @apply font-sans bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 text-gray-800;
+}
+
+.container {
+    @apply max-w-lg mx-auto my-12 p-6 bg-white rounded-lg shadow-lg;
+    @apply transition-transform transform hover:scale-105; /* Add scale animation */
+}
+
+h1 {
+    @apply text-center text-gray-700;
+    @apply animate-bounce; /* Add bounce animation */
+}
+
+form {
+    @apply flex flex-col;
+}
+
+label {
+    @apply my-2;
+}
+
+select, input[type="checkbox"], button {
+    @apply p-2 my-3 border border-gray-300 rounded;
+    @apply transition-colors duration-300; /* Add smooth color transition */
+}
+
+button {
+    @apply bg-green-500 text-white border-none cursor-pointer;
+    @apply transition-transform transform hover:scale-110; /* Add scale animation on hover */
+}
+
+button:hover {
+    @apply bg-green-600;
+}
+
+#message {
+    @apply text-center text-green-600;
+    @apply animate-pulse; /* Add pulse animation */
+}

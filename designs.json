@@ -1,0 +1,26 @@
+document.getElementById('design-form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    const fabric = document.getElementById('fabric').value;
+    const pattern = document.getElementById('pattern').value;
+    const led = document.getElementById('led').checked;
+
+    const data = {
+        fabric: fabric,
+        pattern: pattern,
+        led: led
+    };
+
+    fetch('/save_design', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(data)
+    })
+    .then(response => response.json())
+    .then(data => {
+        document.getElementById('message').textContent = data.message;
+    })
+    .catch(error => console.error('Error:', error));
+});

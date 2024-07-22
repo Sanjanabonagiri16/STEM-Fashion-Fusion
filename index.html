@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>STEM Fashion Fusion</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+</head>
+
+<body class="bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 text-gray-800">
+
+    <div class="container mx-auto my-12 p-8 bg-white rounded-lg shadow-2xl border-4 border-indigo-500 max-w-lg transition-transform transform hover:scale-105 hover:shadow-2xl hover:border-pink-500">
+
+        <h1 class="text-3xl font-bold text-center text-gray-700 mb-6 animate-text-glow">STEM Fashion Fusion</h1>
+
+        <form id="design-form" class="space-y-4 flex flex-col">
+
+            <div>
+
+                <label for="fabric" class="block text-sm font-medium text-gray-700 my-2">Select Fabric:</label>
+                <select id="fabric" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition-colors duration-300 hover:bg-gray-100">
+
+                    <option value="cotton">Cotton</option>
+                    <option value="silk">Silk</option>
+
+                    <option value="eco_friendly">Eco-Friendly</option>
+                    <option value="denim">Denim</option>
+
+                    <option value="wool">Wool</option>
+
+                    <option value="linen">Linen</option>
+
+                    <option value="satin">Satin</option>
+                    <option value="leather">Leather</option>
+                    <option value="velvet">Velvet</option>
+                    <option value="chiffon">Chiffon</option>
+
+                    <option value="tweed">Tweed</option>
+                    <option value="lace">Lace</option>
+
+                    <option value="organza">Organza</option>
+
+                    <option value="tulle">Tulle</option>
+
+                    <option value="spandex">Spandex</option>
+
+                </select>
+
+            </div>
+
+            <div>
+
+                <label for="pattern" class="block text-sm font-medium text-gray-700 my-2">Select Pattern:</label>
+
+                <select id="pattern" class="mt-1 block w-full py-2 px-3 border border-gray-300 bg-white rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm transition-colors duration-300 hover:bg-gray-100">
+                    <option value="striped">Striped</option>
+                    <option value="floral">Floral</option>
+                    <option value="abstract">Abstract</option>
+                    <option value="polka_dots">Polka Dots</option>
+                    <option value="geometric">Geometric</option>
+                    <option value="paisley">Paisley</option>
+                    <option value="plaid">Plaid</option>
+
+                    <option value="animal_print">Animal Print</option>
+
+                    <option value="herringbone">Herringbone</option>
+                    <option value="chevron">Chevron</option>
+                    <option value="argyle">Argyle</option>
+                    <option value="camouflage">Camouflage</option>
+                    <option value="ikat">Ikat</option>
+                    <option value="tie_dye">Tie-Dye</option>
+                    <option value="damask">Damask</option>
+                </select>
+            </div>
+            <div class="flex items-center">
+                <input type="checkbox" id="led" class="h-4 w-4 text-indigo-600 border-gray-300 rounded transition-transform transform hover:scale-110 focus:ring-2 focus:ring-indigo-500">
+                <label for="led" class="ml-2 block text-sm text-gray-900">Add LED Lights</label>
+            </div>
+
+            <button type="submit" class="w-full py-2 px-4 bg-gradient-to-r from-green-400 to-green-600 text-white font-semibold rounded-md shadow-lg hover:from-green-500 hover:to-green-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-green-500 transition-transform transform hover:scale-110">Save Design</button>
+
+        </form>
+
+        <div id="message" class="mt-4 text-center text-green-600 animate-pulse"></div>
+        <ul id="designs-list" class="mt-6 space-y-2"></ul>
+
+    </div>
+
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+
+</body>
+
+</html>
